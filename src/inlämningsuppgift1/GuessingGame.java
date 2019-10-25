@@ -7,9 +7,9 @@ public class GuessingGame {
 		int a = Integer.parseInt(args[0]);
 		int b = Integer.parseInt(args[1]);
 		
-		Guesser Mumintrollet = new Guesser(a, b);
+		Guesser guesser = new Guesser(a, b);
 		
-		Mumintrollet.start();
+		guesser.start();
 	}
 
 }

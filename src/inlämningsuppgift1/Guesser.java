@@ -1,40 +1,23 @@
 package inlämningsuppgift1;
-import java.io.Console;
+
 import java.util.Scanner;
 
-/**
- * Assignment 1 - Guessing Game
- * 
- * Here's the unfinished source code
- * for the Guesser class. It is your
- * task to complete the missing parts.
- */
+
 public class Guesser{
   private int low;
   private int high;
 
-  /*
-   * Task 1. Write code here for a constructor
-   * which takes two int arguments and saves
-   * them in the instance variables low and high.
-   *
-   * If you don't remember the syntax for how to write
-   * constructors, revisit the chapter "Classes"
-   * and review the section about constructors.
-   *
-   */
-  
-  // Write the constructor below this line.
+
   	public Guesser(int a, int b) {
   		this.low = a;
   		this.high = b;
-  	}
+  	
+  	if (a>b) {
+  		throw new IllegalArgumentException("The first parameter must be lower than the second parameter");
+  	}}
+  	
 
-  /*
-   * Task 2. Complete the start() method, so that
-   * in the method body, you call first the
-   * rules() method, next the doGuesses() method.
-   */
+
   public void start(){
      rules();
      doGuesses();
@@ -48,19 +31,11 @@ public class Guesser{
     System.out.println("Please answer T for true, and F for false.\n");
   }
 
-  /*
-   * Task 3. Complete the code for the getReply() method.
-   * In the current version below, it returns null each
-   * call, which is not what this method is supposed to do.
-   * 
-   * Instead, change the method so that it reads a reply
-   * from the player, and if it is "T" or "F", we have
-   * a valid reply. Return the String that you read from
-   * the player.
-   */
+
   private String getReply(){
     
-    Scanner scanner = new Scanner(System.in);
+    @SuppressWarnings("resource")
+	Scanner scanner = new Scanner(System.in);
     String reply = scanner.next();
     
     while((!reply.equalsIgnoreCase("T")) && (!reply.equalsIgnoreCase("F") )) {
@@ -68,9 +43,7 @@ public class Guesser{
     reply = scanner.next();
     }
     
-    // As long as it is not a valid reply (one of "T" and "F")
-    // write an error message, and read a new reply.
-    // When you have gotten a valid reply, return it.
+
     
     return reply;
 	
