@@ -65,7 +65,7 @@ public class Guesser{
     
     while((!reply.equalsIgnoreCase("T")) && (!reply.equalsIgnoreCase("F") )) {
     	System.out.println("Du kan bara svara med T eller F");
-    scanner.next();
+    reply = scanner.next();
     }
     
     // As long as it is not a valid reply (one of "T" and "F")
