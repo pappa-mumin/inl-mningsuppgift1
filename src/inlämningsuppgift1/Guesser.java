@@ -62,8 +62,8 @@ public class Guesser{
     
     Scanner scanner = new Scanner(System.in);
     String reply = scanner.next();
-    System.out.println("What is your name?");
-    while((!reply.equalsIgnoreCase("t")) || (!reply.equalsIgnoreCase("f") )) {
+    
+    while((!reply.equalsIgnoreCase("T")) && (!reply.equalsIgnoreCase("F") )) {
     	System.out.println("Du kan bara svara med T eller F");
     scanner.next();
     }
@@ -71,7 +71,7 @@ public class Guesser{
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
-    scanner.close();
+    
     return reply;
 	
   }
